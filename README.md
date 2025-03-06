@@ -25,7 +25,7 @@ Ensure you have the following installed:
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-repo.git
+   git clone https://github.com/HassanEssam0110/Task-1-CRUD-API-for-Books
    cd your-repo
    ```
 2. Install dependencies:
@@ -34,19 +34,21 @@ Ensure you have the following installed:
    ```
 3. Create a `.env` file and set up your MongoDB connection string:
    ```
-   MONGO_URI=mongodb://localhost:27017/booksdb
-   PORT=5000
+  PORT=5000
+  NODE_ENV="development"
+  CONNECTION_DB_URI=mongodb://localhost:27017/booksdb
+  
    ```
 4. Start the server:
    ```bash
-   npm start
+   npm start:dev
    ```
 
 ## API Endpoints
 
 ### 1. Create a new book
 
-**POST /books**
+**POST api/v1/books**
 
 #### Request Body:
 
@@ -74,7 +76,7 @@ Ensure you have the following installed:
 
 ### 2. Retrieve all books
 
-**GET /books**
+**GET api/v1/books**
 
 #### Response:
 
@@ -91,7 +93,7 @@ Ensure you have the following installed:
 
 ### 3. Retrieve a specific book by ID
 
-**GET /books/:id**
+**GET api/v1/books/:id**
 
 #### Response:
 
@@ -106,7 +108,7 @@ Ensure you have the following installed:
 
 ### 4. Update a specific book by ID
 
-**PUT /books/:id**
+**PUT api/v1/books/:id**
 
 #### Request Body:
 
@@ -134,7 +136,7 @@ Ensure you have the following installed:
 
 ### 5. Delete a specific book by ID
 
-**DELETE /books/:id**
+**DELETE api/v1/books/:id**
 
 #### Response:
 
@@ -150,6 +152,4 @@ Ensure you have the following installed:
 - **404 Not Found**: If the book is not found.
 - **500 Internal Server Error**: For unexpected server errors.
 
-## License
 
-This project is licensed under the MIT License.
